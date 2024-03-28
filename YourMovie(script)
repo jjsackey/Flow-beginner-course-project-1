@@ -1,0 +1,9 @@
+import Moi from 0x05
+
+transaction(title: String, seen: Int) {
+    prepare(signer: AuthAccount) {}
+
+    execute{
+    Moi.addMyMovie(title: title, seen: seen)
+    }
+}
