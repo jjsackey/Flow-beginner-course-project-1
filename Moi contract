@@ -1,0 +1,23 @@
+pub contract Moi {
+    
+    pub struct FavMovie {
+     pub var title: String
+     pub var seen: Int
+
+     init (_title: String, _seen: Int) {
+      self.title = _title
+      self.seen = _seen
+     }
+    }
+
+    pub let theMovie: {String: FavMovie}
+
+    pub fun addMyMovie(title: String, seen: Int) {
+     let movie = FavMovie(_title: title, _seen: seen)
+     self.theMovie[title] = movie
+    }
+
+    init() {
+    self.theMovie = {}
+    }
+}
